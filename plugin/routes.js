@@ -14,6 +14,20 @@
             middleware    = payload.coreMiddleware,
             errorHandler  = payload.errorHandler;
 
+
+        router.get('/dashboard/:uid', function (req, res) {
+            user.getUserData(req.params.uid, function (error, userData) {
+                if(error){
+                    return errorHandler.respond(500, res);
+                }else if (!userData) {
+                    return errorHandler.respond(404, res);
+                }
+
+                res.json(userData);
+            });
+        });
+
+
         router.get('/users/:uid', apiMiddleware.requireUser, function (req, res) {
             user.getUserData(req.params.uid, function (error, userData) {
                 if(error){
