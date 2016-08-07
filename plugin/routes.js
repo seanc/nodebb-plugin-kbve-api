@@ -15,7 +15,7 @@
             errorHandler  = payload.errorHandler;
 
 
-        router.get('/dash/:uid', function (req, res) {
+        router.get('/dev/dash/:uid', function (req, res) {
             user.getUserData(req.params.uid, function (error, userData) {
                 if(error){
                     return errorHandler.respond(500, res);
@@ -28,7 +28,7 @@
         });
 
 
-        router.get('/users/:uid', apiMiddleware.requireUser, function (req, res) {
+        router.get('/dev/users/:uid', apiMiddleware.requireUser, function (req, res) {
             user.getUserData(req.params.uid, function (error, userData) {
                 if(error){
                     return errorHandler.respond(500, res);
@@ -40,7 +40,7 @@
             });
         });
 
-        router.get('/users/:uid/groups', apiMiddleware.requireUser, function (req, res) {
+        router.get('/dev/users/:uid/groups', apiMiddleware.requireUser, function (req, res) {
             async.parallel({
                 user  : async.apply(user.getUserFields, req.params.uid, ['uid', 'username']),
                 groups: async.apply(controller.getUserGroups, [req.params.uid])

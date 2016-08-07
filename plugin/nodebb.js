@@ -1,4 +1,4 @@
-(function (Module, NodeBB) {
+ls(function (Module, NodeBB) {
     'use strict';
 
     Module.exports = {
