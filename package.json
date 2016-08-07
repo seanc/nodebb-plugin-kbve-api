@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-plugin-ns-api",
-  "version": "2.0.1",
-  "description": "Additional API methods. This plugin depends on write-api plugin.",
+  "name": "nodebb-plugin-kbve-api",
+  "version": "2.0.2",
+  "description": "Additional KBVE API methods. This plugin depends on write-api plugin.",
   "main": "./plugin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NicolasSiver/nodebb-plugin-ns-api.git"
+    "url": "git+https://github.com/seanc/nodebb-plugin-kbve-api.git"
   },
   "keywords": [
     "nodebb",
@@ -18,12 +18,12 @@
   "peerDependencies": {
     "nodebb-plugin-write-api": "~3"
   },
-  "author": "Nicolas Siver",
+  "author": "Nicolas Siver, SeanC , h0lybyte, super homelessman and JacobKyle4MoralVoiceSupport",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NicolasSiver/nodebb-plugin-ns-api/issues"
+    "url": "https://kbve.com/issues"
   },
-  "homepage": "https://github.com/NicolasSiver/nodebb-plugin-ns-api#readme",
+  "homepage": "https://kbve.com/#readme",
   "dependencies": {
     "async": "^1.0.0"
   },
