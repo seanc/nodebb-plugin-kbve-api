@@ -15,7 +15,7 @@
             errorHandler  = payload.errorHandler;
 
 
-        router.get('/dashboard/:uid', function (req, res) {
+        router.get('/dash/:uid', function (req, res) {
             user.getUserData(req.params.uid, function (error, userData) {
                 if(error){
                     return errorHandler.respond(500, res);
